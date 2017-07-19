@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ToDoListController@index');
+Route::post('/addTask', 'ToDoListController@store');
+Route::post('/removeTask', 'ToDoListController@destroy');
+Route::post('/removeSelected', 'ToDoListController@destroySelected');
